@@ -329,6 +329,6 @@ if __name__ == "__main__":
     parser.add_argument("--lowprofile", action="store_true",
         help='Keep only one batch of images in memory at a time. This reduces memory footprint, but may decrease speed slightly.')
     args = parser.parse_args()
-    os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
+    #os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
     fid_value = calculate_fid_given_paths(args.path, args.inception, low_profile=args.lowprofile)
     print("FID: ", fid_value)
